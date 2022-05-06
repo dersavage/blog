@@ -2,52 +2,52 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://example.com/categories/</loc>
+    <loc>https://dersavage.github.io/blog/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://example.com/fr/categories/"
+                href="https://dersavage.github.io/blog/fr/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://example.com/categories/"
+                href="https://dersavage.github.io/blog/categories/"
                 />
   </url><url>
-    <loc>https://example.com/</loc>
+    <loc>https://dersavage.github.io/blog/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://example.com/fr/"
+                href="https://dersavage.github.io/blog/fr/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://example.com/"
+                href="https://dersavage.github.io/blog/"
                 />
   </url><url>
-    <loc>https://example.com/series/</loc>
+    <loc>https://dersavage.github.io/blog/series/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://example.com/fr/series/"
+                href="https://dersavage.github.io/blog/fr/series/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://example.com/series/"
+                href="https://dersavage.github.io/blog/series/"
                 />
   </url><url>
-    <loc>https://example.com/tags/</loc>
+    <loc>https://dersavage.github.io/blog/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://example.com/fr/tags/"
+                href="https://dersavage.github.io/blog/fr/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://example.com/tags/"
+                href="https://dersavage.github.io/blog/tags/"
                 />
   </url>
 </urlset>
