@@ -2,6 +2,50 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://dersavage.github.io/blog/posts/2022/05/</loc>
+    <lastmod>2022-05-07T23:16:08+08:00</lastmod>
+  </url><url>
+    <loc>https://dersavage.github.io/blog/tags/islam/</loc>
+    <lastmod>2022-05-07T23:16:08+08:00</lastmod>
+  </url><url>
+    <loc>https://dersavage.github.io/blog/</loc>
+    <lastmod>2022-05-07T23:16:08+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://dersavage.github.io/blog/fr/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://dersavage.github.io/blog/"
+                />
+  </url><url>
+    <loc>https://dersavage.github.io/blog/tags/metaphysics/</loc>
+    <lastmod>2022-05-07T23:16:08+08:00</lastmod>
+  </url><url>
+    <loc>https://dersavage.github.io/blog/posts/</loc>
+    <lastmod>2022-05-07T23:16:08+08:00</lastmod>
+  </url><url>
+    <loc>https://dersavage.github.io/blog/tags/religion/</loc>
+    <lastmod>2022-05-07T23:16:08+08:00</lastmod>
+  </url><url>
+    <loc>https://dersavage.github.io/blog/tags/</loc>
+    <lastmod>2022-05-07T23:16:08+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://dersavage.github.io/blog/fr/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://dersavage.github.io/blog/tags/"
+                />
+  </url><url>
+    <loc>https://dersavage.github.io/blog/about/</loc>
+    <lastmod>2022-04-09T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://dersavage.github.io/blog/categories/</loc>
     <xhtml:link
                 rel="alternate"
@@ -14,18 +58,6 @@
                 href="https://dersavage.github.io/blog/categories/"
                 />
   </url><url>
-    <loc>https://dersavage.github.io/blog/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://dersavage.github.io/blog/fr/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://dersavage.github.io/blog/"
-                />
-  </url><url>
     <loc>https://dersavage.github.io/blog/series/</loc>
     <xhtml:link
                 rel="alternate"
@@ -36,18 +68,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://dersavage.github.io/blog/series/"
-                />
-  </url><url>
-    <loc>https://dersavage.github.io/blog/tags/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://dersavage.github.io/blog/fr/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://dersavage.github.io/blog/tags/"
                 />
   </url>
 </urlset>
