@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="map[name:Jan Savage]">
+<meta name="description" content="AlhamduliLlah!
+Everybody is writing tutorials and books on programming. Does the world need yet another?
+Of course it does. So here I am with mine. But more seriously, the proof is always in the pudding. What I wish to accomplish is to make it so simple as to leave no stone leave unturned. But that can be boring, so at the same time, the challenge fairy tells me I must make the tutorial as interesting and useful as possible within the range of possibility." />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="" />
+<link rel="canonical" href="https://dersavage.github.io/blog/hello_julia/" />
+
+
+    <title>
+        
+            Hello Julia? :: Jan Savage  — The Jan Savage cave
+        
+    </title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="https://dersavage.github.io/blog/main.4e5c639214707eff609bb55fe49e183dee42258a73bc90e4cc7b0a84f900798a.css">
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="https://dersavage.github.io/blog/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://dersavage.github.io/blog/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://dersavage.github.io/blog/favicon-16x16.png">
+    <link rel="manifest" href="https://dersavage.github.io/blog/site.webmanifest">
+    <link rel="mask-icon" href="https://dersavage.github.io/blog/safari-pinned-tab.svg" color="">
+    <link rel="shortcut icon" href="https://dersavage.github.io/blog/favicon.ico">
+    <meta name="msapplication-TileColor" content="">
+
+
+<meta itemprop="name" content="Hello Julia?">
+<meta itemprop="description" content="AlhamduliLlah!
+Everybody is writing tutorials and books on programming. Does the world need yet another?
+Of course it does. So here I am with mine. But more seriously, the proof is always in the pudding. What I wish to accomplish is to make it so simple as to leave no stone leave unturned. But that can be boring, so at the same time, the challenge fairy tells me I must make the tutorial as interesting and useful as possible within the range of possibility."><meta itemprop="datePublished" content="2022-05-09T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2022-05-09T00:00:00+00:00" />
+<meta itemprop="wordCount" content="549"><meta itemprop="image" content="https://dersavage.github.io/blog/"/>
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://dersavage.github.io/blog/"/>
+
+<meta name="twitter:title" content="Hello Julia?"/>
+<meta name="twitter:description" content="AlhamduliLlah!
+Everybody is writing tutorials and books on programming. Does the world need yet another?
+Of course it does. So here I am with mine. But more seriously, the proof is always in the pudding. What I wish to accomplish is to make it so simple as to leave no stone leave unturned. But that can be boring, so at the same time, the challenge fairy tells me I must make the tutorial as interesting and useful as possible within the range of possibility."/>
+
+
+
+
+    <meta property="og:title" content="Hello Julia?" />
+<meta property="og:description" content="AlhamduliLlah!
+Everybody is writing tutorials and books on programming. Does the world need yet another?
+Of course it does. So here I am with mine. But more seriously, the proof is always in the pudding. What I wish to accomplish is to make it so simple as to leave no stone leave unturned. But that can be boring, so at the same time, the challenge fairy tells me I must make the tutorial as interesting and useful as possible within the range of possibility." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://dersavage.github.io/blog/hello_julia/" /><meta property="og:image" content="https://dersavage.github.io/blog/"/><meta property="article:section" content="" />
+<meta property="article:published_time" content="2022-05-09T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-05-09T00:00:00+00:00" />
+
+
+
+
+
+
+
+    <meta property="article:published_time" content="2022-05-09 00:00:00 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+
+
+    </head>
+
+    
+        <body>
+    
+    
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="https://dersavage.github.io/blog/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">&gt;</span>
+            <span class="logo__text">$ cd /home/</span>
+            <span class="logo__cursor" style=
+                  "
+                   
+                   ">
+            </span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="https://dersavage.github.io/blog/about/">About</a></li><li><a href="https://dersavage.github.io/blog/julia/">Hello Julia?</a></li><li><a href="https://dersavage.github.io/blog/posts/">Posts</a></li>
+        <div class="submenu">
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">en</a>
+                <div class="dropdown-content">
+                    
+                        
+                    
+                </div>
+            </li>
+        </div>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+
+        <div class="post-info">
+            
+            </p>
+        </div>
+
+        <article>
+            <h2 class="post-title"><a href="https://dersavage.github.io/blog/hello_julia/">Hello Julia?</a></h2>
+
+            
+            
+            
+
+            <div class="post-content">
+                <p>AlhamduliLlah!</p>
+<p>Everybody is writing tutorials and books on programming. Does the world need yet another?</p>
+<p>Of course it does. So here I am with mine. But more seriously, the proof is always in the pudding. What I wish to accomplish is to make it so simple as to leave no stone leave unturned. But that can be boring, so at the same time, the challenge fairy tells me I must make the tutorial as interesting and useful as possible within the range of possibility.</p>
+<p>As to who I am or what my qualifications are, I kindly redirect you to my Quora post: <a href="https://www.quora.com/profile/Jan-M-Savage">Why is mathematics so hard?</a> There you will see how I have fused Julia with combinatorics (it&rsquo;s easy, almost anyone with middle-school education can read it.).</p>
+<p>We will now directly proceed.</p>
+<h3 id="why-is-julia-beautiful">Why is Julia beautiful?</h3>
+<p>Suppose I want to write a &ldquo;verb&rdquo;, which we call a function in programming, that returns (gives us) a greeting. In Julia, this is how we do it:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> greetbot()
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;how do you do?&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span></code></pre></div><p>So, <code>function</code> is a reserved keyword that is used to construction a procedure in Julia. The name <code>greetbot</code> I chose can be anything that is clear and suitable to the task. It must be followed by <code>()</code> so as to give the impression that this is a function, a verb, a procedure. In many languages, this is necessary.</p>
+<p>And <code>return</code> is another reserved keyword. It is used in the body of the function to give us back the outcome of the operation that occurs in the body of the function.</p>
+<p>If you want to speak human language to the computer, you better use &ldquo;I am some text&rdquo; so that the computer knows this is not a number, or a logical value such as <code>true</code> or <code>false</code>. So our greetbot, in its body operation, takes some text&ndash;text is called <em>string</em> in programming&ndash;in this case &ldquo;how do you do?&rdquo; and gives it back to us each time we ask greeetbot() to do its job.</p>
+<hr>
+<p><strong>Installation</strong></p>
+<p>Please skip this part if you know how to install Julia.</p>
+<p>The program greetbot gives us the greeting message when we <em>call</em> the function. This means we write it down in the <a href="https://support.apple.com/guide/terminal/welcome/mac">terminal</a>. Basically a terminal is a program designed to run programs&ndash;and do many other things, of course. You can find the terminal on Linux and Windows as well. For programming beginners, I highly recommend the MacOS: on a Mac, search for it in the spotlight and the program will load.</p>
+<p>To install Julia, simply download homebrew on your Mac, and then instal Julia without pain. Briefly, this is how:</p>
+<p>Go to <a href="https://docs.brew.sh/Installation">https://docs.brew.sh/Installation</a>. On your Mac Terminal, switch your terminal from zsh to bash (or else it won&rsquo;t work!) by typing:</p>
+<pre tabindex="0"><code>exec bash
+</code></pre><p>Then press <code>enter</code> and now you are ready to install homebrew from the above link. After that is done, launch your terminal and type this:</p>
+<pre tabindex="0"><code>brew cask install julia
+</code></pre><p>If this method failed, or somehow you could not do it, an alternative is to <a href="https://julialang.org/downloads/">download Julia</a> for your OS, and on simply double-click to install it (for MacOS). For other operating systems, a detailed explanation is given <a href="https://www.juliafordatascience.com/first-steps-1-installing-julia/">here</a>.</p>
+<hr>
+<p><strong>Proceed here if you already installed Julia</strong></p>
+<p>So now, Let&rsquo;s see the greetbot in action:</p>
+
+    <img src="https://dersavage.github.io/blog/img/greetbot.gif"  alt="how do you do?"  class="center"  style="border-radius: 8px;"  />
+
+
+<p>Still with me?</p>
+<p>More coming soon&hellip;</p>
+
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+            
+            
+  		</div>
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2022</span>
+            <span><a href="https://dersavage.github.io/blog/">Jan Savage</a></span>
+            <span><a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a></span>
+            <span><a href="https://dersavage.github.io/blog/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
+            
+        </div>
+    </div>
+    
+    
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>Powered by <a href="http://gohugo.io">Hugo</a></span><span>Made with &#10084; by <a href="https://github.com/rhazdon">Djordje Atlialp</a></span>
+        </div>
+    </div>
+    
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+<script type="text/javascript" src="https://dersavage.github.io/blog/bundle.min.a2c5b062c87998f04d1b5dfb6a89a1b2d79786c21d0cb63a05e8a2082984b64b77d80955e3b97eab17273775162ba372511b711fea2f7608f216e68a67bb22d6.js" integrity="sha512-osWwYsh5mPBNG137aomhsteXhsIdDLY6BeiiCCmEtkt32AlV47l&#43;qxcnN3UWK6NyURtxH&#43;ovdgjyFuaKZ7si1g=="></script>
+
+
+
+    </body>
+</html>
