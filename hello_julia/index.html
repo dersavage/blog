@@ -45,7 +45,7 @@ Of course it does. So here I am with mine. But more seriously, the proof is alwa
 Everybody is writing tutorials and books on programming. Does the world need yet another?
 Of course it does. So here I am with mine. But more seriously, the proof is always in the pudding. What I wish to accomplish is to make it so simple as to leave no stone leave unturned. But that can be boring, so at the same time, the challenge fairy tells me I must make the tutorial as interesting and useful as possible within the range of possibility."><meta itemprop="datePublished" content="2022-05-09T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2022-05-09T00:00:00+00:00" />
-<meta itemprop="wordCount" content="549"><meta itemprop="image" content="https://dersavage.github.io/blog/"/>
+<meta itemprop="wordCount" content="1912"><meta itemprop="image" content="https://dersavage.github.io/blog/"/>
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://dersavage.github.io/blog/"/>
@@ -179,13 +179,66 @@ Of course it does. So here I am with mine. But more seriously, the proof is alwa
 </code></pre><p>If this method failed, or somehow you could not do it, an alternative is to <a href="https://julialang.org/downloads/">download Julia</a> for your OS, and on simply double-click to install it (for MacOS). For other operating systems, a detailed explanation is given <a href="https://www.juliafordatascience.com/first-steps-1-installing-julia/">here</a>.</p>
 <hr>
 <p><strong>Proceed here if you already installed Julia</strong></p>
-<p>So now, Let&rsquo;s see the greetbot in action:</p>
+<p>So now, Let&rsquo;s see the greetbot in action. If you are viewing this on a mobile phone, tilt your phone horizontally so that the font looks bigger:</p>
 
     <img src="https://dersavage.github.io/blog/img/greetbot.gif"  alt="how do you do?"  class="center"  style="border-radius: 8px;"  />
 
 
-<p>Still with me?</p>
-<p>More coming soon&hellip;</p>
+<p>Now we are ready to do more. You have perhaps heard of something called the Fibonacci sequence. If not, don&rsquo;t panic because we will get to the bottom of it. Suppose I show you a line made of this numbers placed in a sequence:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>0, 1, 1, 2, 3, 5, 8, 13, 21, 34...
+</span></span></code></pre></div><p>What is going on? Suppose we take the first five numbers:</p>
+<p>As we go from 0 to 1, we are moving from the 1st number to the 2nd number. As we go from 1 to 1, we are moving from the 2nd, to the 3rd numbe. Sequences emerge when a pattern emerges. The first part of the data is not sufficient to tell us whether a sequence is emerging. The second part gives us a bit more information, but it is still not enough. We cannot confidently answer how we went from 1 (in the second position) to another 1 (in the third position). We need more information.</p>
+<p>Looking at 2, in the 4th position, we can conjecture: if we add 0 + 1, we get the third-position 1, and if we add 1 + 1, we get the fourth-position 2. The pattern is emerging, but we are not confident yet. We need more data.</p>
+<p>If we continue to apply this pattern, it matches the results above. So we can define the Fibonacci sequence as a sequence of numbers who are sums of the previous two numbers. Is this definition clear enough?</p>
+<p>Now, we would like to create a function that generates the Fibonacci sequence. Don&rsquo;t worry we will start very slowly and will not make irrational jumbs (a jumb is a sudden jump in difficulty levels causing the learner to feel they are dumb&ndash;which, in fact, they are not!).</p>
+<p>In any programming language, the concept of the conditional is something that involves <code>if</code> and <code>else</code>. If food is cooked, turn off the oven, otherwise (else), keep cooking. Very straight-forward. Now we wet our feet by creating a function that takes a parameter (an input) and does something to that input. Suppose yo want a function that takes a number and doubles it. In Julia:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> doubler(h)
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> h <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span></code></pre></div><p>Note that the input can be any number (but no text or strings) and we called it <code>h</code> but we could have called it anything. This does not matter so long as the parameter name is clear. Well, <code>h</code> is not very clear. We could have done better. Now you may go to <a href="https://www.repl.it">www.repl.it</a> to launch an online Julia scratchpad, or use your local Julia installation (best to work locally). Your task is to implement (write, create) a function that takes a number, adds it to 13, multiples it to 6, divides it over 2. Go ahead and do this now before looking at our solution, which is given somewhere below (in order to prevent potential laziness ;)).</p>
+<p>Another thing is that you are not limited to passing only one parameter to a given function. Our first example showed that a function can be parameter-less. The second example stated that it can take one parameter. But we can also do n parameters. As an example, let&rsquo;s create a function that takes 3 numeric parameters. If the first param is larger than the other two, it should multiply all three together; otherwise, it should add them all up.</p>
+<p>I will now demonstrate this so you can see the conditionals in action inside a function body. This does not mean conditionals can only be used within a function body. They can be used anywhere. Our function is:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> mathurator(a, b, c)
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> a <span style="color:#f92672">&gt;</span> b <span style="color:#f92672">&amp;&amp;</span> a <span style="color:#f92672">&gt;</span> c
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> a <span style="color:#f92672">*</span> b <span style="color:#f92672">*</span> c
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> a <span style="color:#f92672">+</span> b <span style="color:#f92672">+</span> c
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span></code></pre></div><p>Quite a lot is going on here, so let&rsquo;s dissect them. We added a custom name <code>mathurator</code> to our function. The function takes three parameters, which we temporarily labeled <code>a</code>, <code>b</code>, <code>c</code>. Params must be separated by a comma.</p>
+<p>Then we added our first conditional clause. We joined the two conditions by an AND, which is <code>&amp;&amp;</code> in Julia. In many other languages it is <code>and</code> or <code>&amp;</code> and so forth. The second conditional clause is activated as long a the first clause is not true. So if a is not bigger than b and c at the same time, then the <code>else</code> clause will activate and the params will be summed.</p>
+<p>Unlike Python but like Ruby, Julia requires an <code>end</code> to create visual order in the code structure. So one <code>end</code> is required to end the conditional <code>if-else</code> siblings. Another <code>end</code> is needed to signal closing the function off. The indentation is optional and a Julia program can run even if you don&rsquo;t indent them like this.</p>
+<p>A two-space indentation is a matter of standard style and good code readability, so you should follow the standard style because then your code will look easy on the eyes.</p>
+<p>Let&rsquo;s see this in action:</p>
+
+    <img src="https://dersavage.github.io/blog/img/mathurator.gif"  alt="mathurator"  class="center"  style="border-radius: 8px;"  />
+
+
+<p>Once again, if you look carefully, quite a lot is happening and we need to see exactly what. The gif is on auto-loop for a pedagogical reason. I will make an explanation here, and then you, the good and intelligent detective, have to watch the looping gif to discover which part matches which part of my explanation.</p>
+<p>In animation, you should see the following things happening:</p>
+<ul>
+<li>We are defining our function and call the function with three params, where a is larger than b and c. It works and gives us the result.</li>
+<li>Next, our first param, a, is not bigger than b and c. The program <em>should</em> work but does not. It gives us nothing. It refuses to cooperate.</li>
+<li>Next, we add an additional <code>if</code> to see if something like that is possible. What if we asked: <em>if a is bigger than b</em> &amp;&amp; <em>if a is bigger than c</em> ? Would that work? Perhaps it would increase readability? We try and get an error. The error message is very clear. It tell us the additional <code>if</code> needs its own corresponding <code>end</code>.</li>
+</ul>
+<p>Now, before we launch into this discussion, let&rsquo;s see the solution to your first task: a function that takes a number, adds it to 13, multiples it to 6, divides it over 2:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> mathbroth(n)
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> (n <span style="color:#f92672">+</span> <span style="color:#ae81ff">13</span>) <span style="color:#f92672">*</span> <span style="color:#ae81ff">6</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span></code></pre></div><p>Computing is a precise topic. The definition of our task was not precise enough. It did not state: &ldquo;takes a number, first adds it to 13, and then multiplies the outcome to 6&rdquo;, which is what I have shown above. Because of that ambiguity, we could have also done this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> mathbroth(n)
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> n <span style="color:#f92672">+</span> <span style="color:#ae81ff">13</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">6</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span></code></pre></div><p>Which would have given us a totally different number because Julia follows the mathematical order of precedence: first multiplication and division are done, then addition and subtraction. Go ahead and try implementing in both ways and pass the same input to see what kinds of different results you will get.</p>
+<p>Now we are back to the <code>mathurator</code> discusson. Whenever you have a computing problem, try to break it down to elementary bits and see if they too have any problems? If something works at the elementary, or atomic level, then this provides clues to fix our bigger problem. At the very least, it points us into the direction of a potential solution.</p>
+<p>Hence, we are asking why <code>mathurator</code> does not work as expected when a is less than b and c. What is causing the issue? We simplify it to two parameters and see that it works:</p>
+
+    <img src="https://dersavage.github.io/blog/img/basicator.gif"  alt="basicator"  class="center"  style="border-radius: 8px;"  />
+
+
+<p>Clearly, the <code>if-else</code> is working when we use two params. Then the problem must occur when the third param is added. Specifically, the problem occurs because of how we joined two conditionals with &amp;&amp;. What do you think should we do to resolve it? This is your task II. Play with it until you figure it out. Of course, the solution is given somewhere below, so if you got stuck you can be guided back to the land of the unstuck.</p>
+<hr>
+<p>More coming soon.</p>
 
             </div>
         </article>
