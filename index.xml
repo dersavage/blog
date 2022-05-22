@@ -13,9 +13,10 @@
       <pubDate>Mon, 09 May 2022 00:00:00 +0000</pubDate>
       
       <guid>https://dersavage.github.io/blog/hello_julia/</guid>
-      <description>AlhamduliLlah!
-Everybody is writing tutorials and books on programming. Does the world need yet another?
-Of course it does. So here I am with mine. But more seriously, the proof is always in the pudding. What I wish to accomplish is to make it so simple as to leave no stone leave unturned. But that can be boring, so at the same time, the challenge fairy tells me I must make the tutorial as interesting and useful as possible within the range of possibility.</description>
+      <description>﷽
+We will now directly proceed.
+Why is Julia beautiful? Suppose I want to write a &amp;ldquo;verb&amp;rdquo;, which we call a function in programming, that returns (gives us) a greeting. In Julia, this is how we do it:
+function greetbot()  return &amp;#34;how do you do?&amp;#34; end So, function is a reserved keyword that is used to construction a procedure in Julia. The name greetbot I chose can be anything that is clear and suitable to the task.</description>
     </item>
     
     <item>
@@ -24,7 +25,10 @@ Of course it does. So here I am with mine. But more seriously, the proof is alwa
       <pubDate>Sat, 09 Apr 2022 00:00:00 +0000</pubDate>
       
       <guid>https://dersavage.github.io/blog/about/</guid>
-      <description>I divide my life so far into three periods. The golden period, the dreamy period, and the period of reality. In the golden period, I was a professor of mathematics, social and natural sciences at a prestigious university in East Asia. In the dreamy period, I stopped teaching and entered the land of programming. The teacher and the programmer are still a part of me, even though I have entered the stage of reality.</description>
+      <description>﷽
+Beyond childhood, youth, and the associated tribulations, I divide my life so far into three periods. The golden period, the dreamy period, and the period of reality.
+In the golden period, which lasted nearly 15 years, I was a professor of mathematics, social and natural sciences at several universities in East Asia.
+In the dreamy period, I stopped teaching and entered the land of programming. The teacher and the programmer are still a part of me, even though I have entered the stage of reality.</description>
     </item>
     
   </channel>
